@@ -1,17 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="СервисИнжиниринг — электромонтаж и общестроительные работы в Тобольске. ВРУ, ГРЩ, кабельные линии, отделка. Гарантия до 5 лет, фиксированная смета.">
     <title>СервисИнжиниринг | Электромонтаж и строительство</title>
     <style>
         body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
         .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px 0; }
-        header { background: linear-gradient(135deg, #00509d 0%, #002147 100%); color: white; padding: 40px 0; text-align: center; }
-        .logo { width: 100%; max-width: 100%; height: auto; display: block; margin: 0 auto 15px; }
-        h1 { font-size: 2em; margin-bottom: 10px; }
-        .subtitle { font-size: 1.1em; opacity: 0.9; margin-bottom: 25px; }
+        header { background: linear-gradient(135deg, #00509d 0%, #002147 100%); color: white; padding: 60px 0; text-align: center; }
+        h1 { font-size: 2.5em; margin-bottom: 15px; display: none; } /* Скрываем текстовый заголовок */
+        .subtitle { font-size: 1.2em; opacity: 0.9; margin-bottom: 30px; }
         .btn { background-color: #ffc107; color: #000; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background 0.3s; }
         .btn:hover { background-color: #e0a800; }
         section { padding: 60px 0; }
@@ -24,23 +23,22 @@
         .adv-item { text-align: center; padding: 20px; }
         .portfolio { text-align: center; }
         .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
-        .portfolio-item { background: #e9ecef; height: 200px; border-radius: 10px; overflow: hidden; }
-        .portfolio-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .portfolio-item { background: #e9ecef; height: 200px; display: flex; align-items: center; justify-content: center; color: #666; border-radius: 10px; font-style: italic; }
         .contacts { background: #002147; color: white; }
         form { max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
         input, textarea { padding: 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em; width: 100%; box-sizing: border-box; }
         button { background-color: #ffc107; border: none; color: #000; padding: 15px; font-weight: bold; cursor: pointer; border-radius: 5px; transition: background 0.3s; }
         button:hover { background-color: #e0a800; }
         footer { background: #212529; color: white; text-align: center; padding: 20px 0; }
-        @media (max-width: 768px) { .services-grid, .adv-grid { grid-template-columns: 1fr; } h1 { font-size: 1.6em; } h2 { font-size: 1.6em; } }
+        @media (max-width: 768px) { .services-grid, .adv-grid { grid-template-columns: 1fr; } h1 { font-size: 2em; } }
     </style>
 </head>
 <body>
 
 <header>
     <div class="container">
-        <img alt="Логотип СервисИнжиниринг" class="logo" id="01a21643-84b1-7841-9192-15832275d2b0">
-        <h1>СервисИнжиниринг</h1>
+        <!-- Логотип -->
+        <img src="logo.png" alt="Логотип СервисИнжиниринг" style="width: 400px; max-width: 90%; height: auto; display: block; margin: 0 auto 20px;">
         <div class="subtitle">Профессиональный электромонтаж и общестроительные работы</div>
         <a href="#contacts" class="btn">Получить расчет</a>
     </div>
@@ -90,6 +88,35 @@
     <div class="container">
         <h2>Наши работы</h2>
         <div class="portfolio-grid">
-            <div class="portfolio-item"><img alt="Сборка электрощита ВРУ" id="01a21643-8624-7af7-b2e2-86b1612cef8f"></div>
-            <div class="portfolio-item"><img alt="Прокладка кабельной линии" id="01a21643-87b4-768c-92f5-39ba5145d692"></div>
-            <div class="portfolio-item">
+            <div class="portfolio-item">Фото объекта: Электрощитовая</div>
+            <div class="portfolio-item">Фото объекта: Прокладка кабеля</div>
+            <div class="portfolio-item">Фото объекта: Отделка помещения</div>
+        </div>
+    </div>
+</section>
+
+<section class="contacts" id="contacts">
+    <div class="container">
+        <h2>Контакты</h2>
+        <p><strong>Адрес:</strong> Тюменская область, г. Тобольск, 9 микрорайон, строение 2</p>
+        <p>Email: <a href="mailto:servis.inzhiniring@mail.ru" style="color: #ffc107;">servis.inzhiniring@mail.ru</a></p>
+        <p>Телефон: <a href="tel:+74950000000" style="color: #ffc107;">+7 (XXX) XXX-XX-XX</a> (укажите ваш номер)</p>
+        
+        <form action="mailto:servis.inzhiniring@mail.ru" method="post" enctype="text/plain">
+            <input type="text" name="Имя" placeholder="Ваше имя" required>
+            <input type="tel" name="Телефон" placeholder="Ваш телефон" required>
+            <input type="email" name="Email" placeholder="Ваш email">
+            <textarea name="Сообщение" placeholder="Опишите задачу" required></textarea>
+            <button type="submit">Отправить заявку</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 СервисИнжиниринг. Все права защищены.</p>
+    </div>
+</footer>
+
+</body>
+</html>
